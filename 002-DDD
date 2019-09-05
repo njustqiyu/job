@@ -1,0 +1,30 @@
+
+
+### 领域驱动设计（DDD）
+
+1，确定业务服务（Business Service）;
+
+2，定义领域对象（Entity，Value-Object【VO】）;
+
+3，定义领域对象的属性和关联关系；
+
+4，为领域对象增加行为
+
+![1565160155904](C:\Users\q50004926\AppData\Roaming\Typora\typora-user-images\1565160155904.png)
+
+一些相关名词：
+
+实体Entity：具备唯一ID，能够被持久化，具备业务逻辑，对应现实世界业务对象。
+
+值对象Value Object：不具有唯一ID，由对象的属性描述，
+
+工厂factories：用来创建实体
+
+仓库Repositories：用来管理实体的集合
+
+服务services：为上层建筑提供可操作的接口，负责对领域对象进行调度和封装，同时可以对外提供各种形式的服务。
+
+![1565161334406](C:\Users\q50004926\AppData\Roaming\Typora\typora-user-images\1565161334406.png)
+
+
+
