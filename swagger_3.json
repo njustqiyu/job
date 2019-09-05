@@ -1,0 +1,29 @@
+{
+  "regularList": [
+    {
+      "field": "info.version",
+      "parameter": "^([1-9]\\d|[1-9])(\\.([1-9]\\d|\\d)){2}$"
+    },
+    {
+      "field": "info.title",
+      "parameter": "^[\\w\\s]+$"
+    }
+  ],
+  "existFieldsList": [
+    {
+      "field": "paths.2.tags",
+      "parameter": true
+    },
+    {
+      "field": "paths.2.operationId",
+      "parameter": true
+    }
+  ],
+  "inheritList": [
+    {
+      "firstField": "consumes",
+      "lastField": "paths.2.consumes",
+      "parameter": "true"
+    }
+  ]
+}
