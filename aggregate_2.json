@@ -1,0 +1,83 @@
+{
+  "defaultObjectCount": 1,
+  "defaultObjectType": "Entity",
+  "illegalPointingListInterAgg": [
+    {
+      "sourceObjectType": "Entity",
+      "targetObjectType": "Root-Object"
+    },
+    {
+      "sourceObjectType": "Value-Object",
+      "targetObjectType": "Root-Object"
+    },
+    {
+      "sourceObjectType": "Value-Object",
+      "targetObjectType": "Entity"
+    }
+  ],
+  "illegalLineMarkListInterAgg": [
+    {
+      "sourceFirstChar": "0",
+      "targetFirstChar": "0",
+      "lineType": "DirectionLine"
+    },
+    {
+      "sourceFirstChar": "0",
+      "targetFirstChar": "1",
+      "lineType": "DirectionLine"
+    },
+    {
+      "sourceFirstChar": "1",
+      "targetFirstChar": "1",
+      "lineType": "DirectionLine"
+    },
+    {
+      "sourceFirstChar": "0",
+      "targetFirstChar": "1",
+      "lineType": "NoDirectionLine"
+    },
+    {
+      "sourceFirstChar": "1",
+      "targetFirstChar": "1",
+      "lineType": "NoDirectionLine"
+    }
+  ],
+  "illegalPointingListBetweenAgg": [
+    {
+      "sourceObjectType": "Root-Object",
+      "targetObjectType": "Entity"
+    },
+    {
+      "sourceObjectType": "Entity",
+      "targetObjectType": "Entity"
+    },
+    {
+      "sourceObjectType": "Value-Object",
+      "targetObjectType": "Entity"
+    },
+    {
+      "sourceObjectType": "Root-Object",
+      "targetObjectType": "Value-Object"
+    },
+    {
+      "sourceObjectType": "Entity",
+      "targetObjectType": "Value-Object"
+    },
+    {
+      "sourceObjectType": "Value-Object",
+      "targetObjectType": "Value-Object"
+    }
+  ],
+  "illegalLineMarkListBetweenAgg": [
+    {
+      "sourceFirstChar": "0",
+      "targetFirstChar": "0",
+      "lineType": "DirectionLine"
+    },
+    {
+      "sourceFirstChar": "1",
+      "targetFirstChar": "1",
+      "lineType": "NoDirectionLine"
+    }
+  ]
+}
