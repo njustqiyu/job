@@ -1,0 +1,306 @@
+{
+  "swagger": "2.0",
+  "info":
+  {
+    "description": "service provided by BO_Aggregate_lamp",
+    "version": "1.0.5",
+    "title": "lamp"
+  },
+  "host": "100.101.58.110:8118",
+  "basePath": "/bo/0000000000MtFSbRwTJp/0000000000MtFSbRwTJp.680000000000MtFSbRwTJp.BO_Aggregate_lamp",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/turnOnLamp": {
+      "post": {
+        "tags": [
+          "BO_Aggregate_lamp"
+        ],
+        "operationId": "turnOnLamp",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/turnOnLamp_input"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/turnOnLamp_output"
+            }
+          }
+        }
+      }
+    },
+    "/turnOffLamp": {
+      "post": {
+        "tags": [
+          "BO_Aggregate_lamp"
+        ],
+        "operationId": "turnOffLamp",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/turnOffLamp_input"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/turnOffLamp_output"
+            }
+          }
+        }
+      }
+    },
+    "/getOffLampSate": {
+      "post": {
+        "tags": [
+          "BO_Aggregate_lamp"
+        ],
+        "summary": "",
+        "description": "",
+        "operationId": "getOffLampSate",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/getOffLampSate_input"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "home_id": {
+                    "type": "string"
+                  },
+                  "lamp_status": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getLampSate": {
+      "post": {
+        "tags": [
+          "BO_Aggregate_lamp"
+        ],
+        "summary": "",
+        "description": "",
+        "operationId": "getLampSate",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/getLampSate_input"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "home_id": {
+                    "type": "string"
+                  },
+                  "lamp_status": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "turnOnLamp_input": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "home_id": {
+          "type": "string"
+        },
+        "lamp_status": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "turnOffLamp_input": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "home_id": {
+          "type": "string"
+        },
+        "lamp_status": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "status": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "turnOnLamp_output": {
+      "type": "object",
+      "required": [
+        "result"
+      ],
+      "properties": {
+        "result": {
+          "type": "boolean"
+        }
+      }
+    },
+    "turnOffLamp_output": {
+      "type": "object",
+      "required": [
+        "result"
+      ],
+      "properties": {
+        "result": {
+          "type": "boolean"
+        }
+      }
+    },
+    "getOffLampSate_input": {
+      "type": "object",
+      "required": [
+        "homeId"
+      ],
+      "properties": {
+        "homeId": {
+          "type": "string"
+        }
+      }
+    },
+    "getLampSate_input": {
+      "type": "object",
+      "required": [
+        "homeId"
+      ],
+      "properties": {
+        "homeId": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
